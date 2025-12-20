@@ -1,0 +1,93 @@
+name: Release to GitHub Pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  github-pages-release:
+    timeout-minutes: 10
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install pinned nightly
+        uses: dtolnay/rust-toolchain@nightly
+        with:
+          toolchain: nightly-2024-08-15
+          components: clippy, rustfmt
+
+      - name: Add WASM target
+        run: rustup target add wasm32-unknown-unknown
+
+      - name: Lint (fmt + clippy)
+        run: |
+          cargo fmt --all -- --check
+          cargo clippy --all-targets --all-features -- -D warnings
+
+      # - name: Build Tailwind CSS
+      #   run: |
+      #     npm ci
+      #     npx tailwindcss -i <INPUT/PATH.css> -o <OUTPUT/PATH.css> --minify
+
+      - name: Install Trunk
+        run: |
+          wget -qO- https://github.com/trunk-rs/trunk/releases/download/v0.18.4/trunk-x86_64-unknown-linux-gnu.tar.gz | tar -xzf-
+          sudo mv trunk /usr/local/bin/trunk
+
+      - name: Build with Trunk
+        run: trunk build --release --public-url "/${GITHUB_REPOSITORY#*/}"
+
+      # Make a Pages-safe mirror: dereference symlinks/hardlinks and normalize perms
+      - name: Make Pages-safe copy (no links, normalized perms)
+        run: |
+          set -euo pipefail
+          rm -rf dist_pages
+          # -L follows symlinks (copies the target content)
+          # No -H => hard links are not preserved (files are duplicated)
+          rsync -aL --no-owner --no-group --chmod=D755,F644 dist/ dist_pages/
+          # Ensure everything is world-readable and dirs traversable
+          chmod -R a+rX dist_pages
+
+      # Optional diagnostics
+      - name: Inspect dist_pages
+        run: |
+          echo "Size:"
+          du -sh dist_pages || true
+          echo "Symlinks (should be none):"
+          find dist_pages -type l -printf "symlink: %p -> %l\n" || true
+          echo "Hardlinks (should be none):"
+          find dist_pages -type f -links +1 -printf "hardlink: %p (nlink=%n)\n" || true
+          echo "Files not world-readable (should be none):"
+          find dist_pages -type f ! -perm -a+r -printf "%m %p\n" || true
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        with:
+          enablement: true
+
+      # Prefer the Pages uploader; it packages content the way deploy-pages expects
+      - name: Upload artifact (Pages)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist_pages
+
+      - name: Deploy to GitHub Pages 🚀
+        id: deployment
+        uses: actions/deploy-pages@v4

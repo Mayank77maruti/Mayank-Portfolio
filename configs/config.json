@@ -1,0 +1,37 @@
+{
+  "github": "shettysach",
+
+  "about": {
+    "name": "Sachith C Shetty",
+    "intro": "Hi, I'm Sachith, a Master's student in Computer Science at USC, with interests in systems programming, deep learning compilers and programming language compilers. I am also interested in learning about information theory, deep learning and functional programming. I currently use Rust, Python, C++ and C.",
+
+    "langs": ["Rust", "Python", "C++", "C", "Haskell"],
+
+    "experience": [
+      {
+        "title": "Intern at Thingularity India",
+        "description": [ "Created a demo mobile app using Flutter(Dart, Android SDK)", "Helped in testing APIs and preparing test reports using Postman API.", "Learnt about embedded systems and programming, interacting with Bluetooth Low Energy (BLE) devices and Raspberry Pi (Python), and using REST API to get and post data to servers."]
+      }
+    ],
+
+    "education": [
+      {
+        "institute": "USC, Los Angeles",
+        "course": "MSCS",
+        "duration": "2025 - 2027"
+      },
+      {
+        "institute": "VIT, Vellore",
+        "course": "B.Tech CSE",
+        "duration": "2021 - 2025"
+      }
+    ]
+  },
+
+  "links": {
+    "github": "shettysach",
+    "email": "ShettySachith47@gmail.com",
+    "linkedin": "in/sachith-shetty-3a165724b",
+    "twitter": null
+  }
+}

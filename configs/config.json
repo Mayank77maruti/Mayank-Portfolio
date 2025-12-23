@@ -2,36 +2,139 @@
   "github": "Mayank77maruti",
 
   "about": {
-    "name": "Sachith C Shetty",
-    "intro": "Hi, I'm Sachith, a Master's student in Computer Science at USC, with interests in systems programming, deep learning compilers and programming language compilers. I am also interested in learning about information theory, deep learning and functional programming. I currently use Rust, Python, C++ and C.",
+    "name": "Mayank Mohapatra",
+    "location": "Bhubaneswar, Odisha, India",
+    "intro": "Hi there, this is Mayank Mohapatra — great to meet you! I’m a B.Tech undergraduate at NIT Agartala who enjoys building and securing real-world systems. I’m deeply interested in Information Security and DevOps, especially in understanding how production systems break, how to secure them, and how to make deployments faster, safer, and more reliable. I love working close to infrastructure—optimizing CI/CD pipelines, containerizing applications, and hardening cloud deployments. I’m always curious about how things work under the hood and how to make them work better.",
 
-    "langs": ["Rust", "Python", "C++", "C", "Haskell"],
+    "langs": [
+      "C",
+      "C++",
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "SQL",
+      "HTML",
+      "CSS",
+      "MATLAB (Beginner)"
+    ],
 
     "experience": [
       {
-        "title": "Intern at Thingularity India",
-        "description": [ "Created a demo mobile app using Flutter(Dart, Android SDK)", "Helped in testing APIs and preparing test reports using Postman API.", "Learnt about embedded systems and programming, interacting with Bluetooth Low Energy (BLE) devices and Raspberry Pi (Python), and using REST API to get and post data to servers."]
+        "title": "Lead Member, Dev Workflow Team",
+        "organization": "Oppia Foundation",
+        "duration": "Dec 2024 – Apr 2025",
+        "location": "Remote",
+        "description": [
+          "Optimized CI/CD pipelines and reduced Docker image size for a production-scale Python backend deployed on Google App Engine (GAE).",
+          "Improved GitHub Actions workflows using regex-based triggers to prevent unnecessary builds and injection-based exploits.",
+          "Resolved gRPC connection issues, improving stability across distributed services.",
+          "Worked with Python, Docker, GitHub Actions, TypeScript, and Google App Engine."
+        ]
+      },
+      {
+        "title": "Backend Intern",
+        "organization": "National Informatics Centre (NIC)",
+        "duration": "Current",
+        "location": "Agartala, India",
+        "description": [
+          "Developed Spring Boot APIs for the Nodal Summary Service.",
+          "Enabled structured RTI data retrieval to support dashboard-based visualization."
+        ]
       }
     ],
 
     "education": [
       {
-        "institute": "USC, Los Angeles",
-        "course": "MSCS",
-        "duration": "2025 - 2027"
+        "institute": "National Institute of Technology, Agartala",
+        "course": "B.Tech in Electronics and Communication Engineering",
+        "duration": "2022 – 2026",
+        "cgpa": "8.80",
+        "location": "Tripura, India"
       },
       {
-        "institute": "VIT, Vellore",
-        "course": "B.Tech CSE",
-        "duration": "2021 - 2025"
+        "institute": "Bridgewell Global School",
+        "course": "Class 12 (CBSE)",
+        "duration": "2022",
+        "percentage": "92.3%",
+        "location": "Bhubaneswar, Odisha, India"
+      },
+      {
+        "institute": "St. Mary’s Higher Secondary School",
+        "course": "Class 10 (ICSE)",
+        "duration": "2020",
+        "percentage": "95%",
+        "location": "Jharsuguda, Odisha, India"
       }
+    ],
+
+    "projects": [
+      {
+        "name": "OneStop Vyapar",
+        "stack": ["Next.js", "TypeScript", "Docker", "PyCaret", "GitHub Actions", "AWS ECR", "AWS ECS"],
+        "description": [
+          "Built a scalable AI-powered integration hub for SMBs using Amazon MCF.",
+          "Implemented CI/CD with GitHub Actions enabling zero-downtime deployments.",
+          "Dockerized and deployed the platform on AWS ECS for high availability."
+        ]
+      },
+      {
+        "name": "MeuChaT",
+        "stack": ["Next.js", "TypeScript", "Firebase", "ZegoCloud", "Docker", "Tailwind CSS"],
+        "description": [
+          "Developed a real-time chat application with group and direct messaging.",
+          "Integrated voice/video calling, screen sharing, and notifications via ZegoCloud.",
+          "Implemented end-to-end encryption and containerized the app for cloud deployment."
+        ]
+      },
+      {
+        "name": "Fitometer",
+        "stack": ["React Native", "Gemini", "Supabase", "Wear OS", "AI/ML"],
+        "description": [
+          "Built an AI-powered mobile and smartwatch app for image-based food scanning.",
+          "Implemented calorie tracking, step counting, and heart-rate monitoring.",
+          "Provided personalized fitness and nutrition insights."
+        ]
+      }
+    ],
+
+    "skills": {
+      "cs_fundamentals": [
+        "Data Structures and Algorithms",
+        "Object-Oriented Programming",
+        "Operating Systems",
+        "DBMS",
+        "REST APIs"
+      ],
+      "frameworks_tools": [
+        "React",
+        "Next.js",
+        "Docker",
+        "GitHub Actions",
+        "AWS (ECR, ECS)",
+        "Linux (Debian)"
+      ]
+    },
+
+    "achievements": [
+      "LeetCode rating 1560 (Top 29%), solved 290+ problems.",
+      "Top 50 teams in Amazon Smbhav Hackathon among 100,000+ teams.",
+      "2nd Runner Up at Ethos IIT Guwahati Hackathon.",
+      "10th rank in CodePeakW open-source contest by IIT Patna.",
+      "Platinum Rank in Flipr Hackathon 27.2."
+    ],
+
+    "responsibilities": [
+      "Lead Member at Oppia Foundation (Dev Workflow & Angular Teams).",
+      "Training and Placement Cell (TnP) Coordinator at NIT Agartala."
     ]
   },
 
   "links": {
     "github": "Mayank77maruti",
-    "email": "Mayank77marutiith47@gmail.com",
-    "linkedin": "in/sachith-shetty-3a165724b",
-    "twitter": null
+    "email": "mayank.m.nita@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/mayank-mohapatra-697744267/",
+    "leetcode": "Mayank",
+    "codeforces": "Mayank",
+    "geeksforgeeks": "Mayank"
   }
 }

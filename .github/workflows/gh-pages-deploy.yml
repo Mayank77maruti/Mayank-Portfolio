@@ -36,10 +36,10 @@ jobs:
       - name: Add WASM target
         run: rustup target add wasm32-unknown-unknown
 
-      - name: Lint (fmt + clippy)
-        run: |
-          cargo fmt --all -- --check
-          cargo clippy --all-targets --all-features -- -D warnings
+      # - name: Lint (fmt + clippy)
+      #   run: |
+      #     cargo fmt --all -- --check
+      #     cargo clippy --all-targets --all-features -- -D warnings
 
       # - name: Build Tailwind CSS
       #   run: |

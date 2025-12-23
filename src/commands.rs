@@ -9,7 +9,7 @@ pub async fn command(inp0: &str, inp1: &str) -> String {
         "github" | "neofetch" | "fastfetch" => &fetch::get_github().await,
         "repos" | "onefetch" => &fetch::get_repos().await,
         "links" => fetch::get_contacts(),
-        "credits" => texts::CREDITS,
+
 
         "cd" => "Nowhere to go.",
         "mkdir" | "touch" => "Nowhere to create.",
@@ -44,7 +44,6 @@ pub fn autocomplete(inp: &str) -> &str {
         "links",
         "theme",
         "wal",
-        "credits",
         "onefetch",
         "neofetch",
         "fastfetch",

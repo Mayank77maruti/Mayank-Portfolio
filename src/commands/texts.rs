@@ -1,4 +1,4 @@
-pub const HELP: &str = r#"<span class="grn"> _____________  __  ___________  __   ________
+pub const HELP: &str = r#"<span class="grn">
 .___  ___.      ___   ____    ____  ___      .__   __.  __  ___ 
 |   \/   |     /   \  \   \  /   / /   \     |  \ |  | |  |/  / 
 |  \  /  |    /  ^  \  \   \/   / /  ^  \    |   \|  | |  '  /  
@@ -6,17 +6,6 @@ pub const HELP: &str = r#"<span class="grn"> _____________  __  ___________  __ 
 |  |  |  |  /  _____  \   |  |  /  _____  \  |  |\   | |  .  \  
 |__|  |__| /__/     \__\  |__| /__/     \__\ |__| \__| |__|\__\  
 </span>
-Hello, welcome to <u class="blu semibold">Termfolio</u> [WIP]. Type one of these commands -
-
-  <span class="rd semibold">about</span> - View about me
-  <span class="rd semibold">neofetch / fastfetch / github</span> - View about Github profile 
-  <span class="rd semibold">onefetch / repos</span> - View about my pinned repos/projects
-  <span class="rd semibold">links</span> - View contact info and links
-  <span class="rd semibold">help</span> - View this help section
-  <span class="rd semibold">theme / wal</span> - Cycle through themes
-  <span class="rd semibold">credits</span> - View credits and repo
-  <span class="rd semibold">history</span> - View command history
-  <span class="rd semibold">clear</span> - Clear screen
 
 You can use <i>arrow keys</i> to scroll through history,
 and also use <i>Ctrl+L</i> to clear the screen

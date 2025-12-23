@@ -44,6 +44,7 @@ pub fn autocomplete(inp: &str) -> &str {
         "links",
         "theme",
         "wal",
+        "credits",
         "onefetch",
         "neofetch",
         "fastfetch",
@@ -61,5 +62,5 @@ pub fn autocomplete(inp: &str) -> &str {
 }
 
 pub fn banner() -> String {
-    String::from(texts::HELP)
+    String::from("Mosi Mosi (type help to know the commands and remove rest)")
 }

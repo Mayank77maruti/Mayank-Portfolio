@@ -1,4 +1,4 @@
-use super::{About, Links, Profile, Repository};
+use super::structs::{About, Links, Profile, Repository};
 use std::collections::HashMap;
 
 // Ascii art used for Github
@@ -94,7 +94,6 @@ pub fn format_about(about: About) -> String {
                 .join("\n")
         });
 
-    // -------- Final Layout --------
     let final_text = format!(
         r#"<center class="grn semibold">{}</center>
 {}

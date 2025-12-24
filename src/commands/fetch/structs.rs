@@ -10,15 +10,23 @@ pub struct Config {
 #[derive(Deserialize, Serialize, Clone)]
 pub struct About {
     pub name: String,
+    pub location: Option<String>,
     pub intro: String,
     pub langs: Vec<String>,
     pub experience: Vec<Experience>,
     pub education: Vec<Education>,
+    pub projects: Option<Vec<Project>>,
+    pub skills: Option<Skills>,
+    pub achievements: Option<Vec<String>>,
+    pub responsibilities: Option<Vec<String>>,
 }
 
 #[derive(Deserialize, Serialize, Clone)]
 pub struct Experience {
     pub title: String,
+    pub organization: Option<String>,
+    pub duration: Option<String>,
+    pub location: Option<String>,
     pub description: Vec<String>,
 }
 
@@ -27,6 +35,21 @@ pub struct Education {
     pub institute: String,
     pub course: String,
     pub duration: String,
+    pub cgpa: Option<String>,
+    pub location: Option<String>,
+}
+
+#[derive(Deserialize, Serialize, Clone)]
+pub struct Project {
+    pub name: String,
+    pub stack: Vec<String>,
+    pub description: Vec<String>,
+}
+
+#[derive(Deserialize, Serialize, Clone)]
+pub struct Skills {
+    pub cs_fundamentals: Vec<String>,
+    pub frameworks_tools: Vec<String>,
 }
 
 #[derive(Deserialize, Serialize, Clone)]

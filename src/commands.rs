@@ -86,6 +86,9 @@ pub fn banner() -> String {
                 ⠀⠀⠀⠀⠘⢄⣀⡠⠃⠀⠀⠑⠤⠄⠀⠀⠠⠤⠊⠀⠀⠘⢄⣀⡠⠃⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   
 Mosi Mosi 👋
+
 Type `help` to see available commands
+
+This can be best viewed on a desktop/laptop screen.
 "#)
 }

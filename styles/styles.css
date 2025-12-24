@@ -79,10 +79,17 @@ form {
 /* About */
 
 .about {
-  flex: 0 0 calc(60%);
-  outline: 3.5px solid var(--green);
-  outline-offset: 25px;
+  flex: 0 0 60%;
+  outline: none;
+  outline-offset: 0;
+
+  /* terminal-style */
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  text-align: left;
 }
+
 
 /* Github fetch */
 
